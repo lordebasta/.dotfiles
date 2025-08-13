@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
 sudo apt update && apt upgrade
-sudo apt install neovim repgrip
 
+# nvim and its dependencies
+sudo apt install neovim build-essential repgrip python3 python3-venv
 
 sudo apt install gh
 user=$(gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" /user | jq -r .login)
